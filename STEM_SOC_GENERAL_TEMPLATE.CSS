@@ -229,7 +229,7 @@ nav h2{
 .SECTION_THREE{
     width: auto;
     height: auto;
-    background-image: url('STEM_SOC_IMAGE_TWO.svg');
+    background-image: url('STEM_SOC_BACKGROUND_COLOR_LIGHT.svg');
     background-size: cover;
     background-repeat: no-repeat; /* Optional: Prevents tiling of the image */
     background-position: center; /* Optional: Centers the image */
