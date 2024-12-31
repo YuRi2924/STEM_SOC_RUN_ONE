@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="QUIZ_BEE_CHALLENGE.css">
+    <link rel="icon" href="LOGO_THREE_STEM_SOCIETY.png">
+    <title>Quiz Bee Game</title>
+</head>
+<body>
+
+<section class="SECTION_ONE">  
+
+<div class="SECTION_ONE_INTRODUCTORY">
+<h1>
+    INSTRUCTION
+</h1>
+
+<P>
+    Select the correct answer for each question. You have 3 lives to complete the quiz. If you choose the wrong answer or run out of time, you will lose a life. Once all your lives are gone, the quiz will end. Good luck!
+</P>
+
+<a href="STEM_SOC_QUIZ.html">GO BACK</a>
+</div>
+
+<div class="quiz-container">
+    <div id="quiz" style="display: none;"> <!-- Hidden initially -->
+        <div id="lives" class="lives">Lives: 3</div>
+        <div id="timer" class="timer">Time: 10</div>
+        <div id="question" class="question">Press Start to Begin</div>
+        <div id="answers" class="answers"></div>
+    </div>
+    <button id="startBtn" class="start-btn">Start</button> <!-- Start Button Visible -->
+    <div id="gameOver" class="game-over" style="display: none;">Game Over! Refresh to play again.</div>
+</div>
+
+</section>
+
+ <!-------------------------------------FOOTER-------------------------------------------->
+
+ <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+           <h2>  <i class="fa-regular fa-address-book"></i> Contact Us</h2>
+            <p><b>Location:</b> Governor Pack Road, Baguio City, 2600 Benguet, Philippines</p>
+            <p><b>Number:</b> (074) 442 3316</p>
+        </div>
+        <div class="footer-section">
+            <h2> <i class="fa-regular fa-heart"></i> Social Media</h2>
+            <p><b>Facebook Pages:</b></p>
+            <ul>
+                <li><a href="https://www.facebook.com/UCjaguars" target="_blank">University of the Cordilleras Main</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=100095333422873" target="_blank">University of the Cordilleras Integrated School</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=100086652038016" target="_blank">University of the Cordilleras STEM Society</a></li>
+                
+                <li><h4>Discord Account:</h4> <a href="https://discord.com/invite/WzKjsMNJTz?fbclid=IwZXh0bgNhZW0CMTEAAR16hWnkV-CPPQCbIBbPKtt9RWL0oVXKhPO3S7PaAE1qZAYDvkvOYpNemH4_aem_YkEnVghO2UHNHANBrTw0vQ" target="_blank">STEM Society Discord</a>
+                </li>
+
+                <li><h4>Instagram: </h4><a href="https://www.instagram.com/katangkay_society/?utm_source=ig_web_button_share_sheet" target="_blank">Katangkay Society</a></li>
+                
+            </ul>
+            
+        </div>
+        <div class="footer-section">
+            <h2><i class="fa-regular fa-envelope"></i> Email Addresses</h2>
+            <ul>
+                <li><a href="email@uc-bcf.edu.ph">University of the Cordilleras Email address</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 University of the Cordilleras Integrated School STEM Society. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    const quizData = [
+    { question: "What is the chemical symbol for water?", options: ["H2O", "O2", "CO2", "H2"], correct: 0 },
+    { question: "Who developed the theory of relativity?", options: ["Isaac Newton", "Albert Einstein", "Nikola Tesla", "Galileo Galilei"], correct: 1 },
+    { question: "What is the square root of 81?", options: ["7", "8", "9", "10"], correct: 2 },
+    { question: "What gas do plants absorb from the air?", options: ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"], correct: 1 },
+    { question: "What is the hardest natural material on Earth?", options: ["Gold", "Iron", "Diamond", "Platinum"], correct: 2 },
+    { question: "Which planet is known as the Red Planet?", options: ["Earth", "Venus", "Mars", "Jupiter"], correct: 2 },
+    { question: "What is the atomic number of carbon?", options: ["6", "8", "12", "16"], correct: 0 },
+    { question: "What does HTTP stand for?", options: ["HyperText Transfer Protocol", "HyperTool Transfer Protocol", "HyperText Transmission Protocol", "Hyper Transfer Protocol"], correct: 0 },
+    { question: "Who is known as the father of modern physics?", options: ["Max Planck", "Isaac Newton", "Albert Einstein", "Niels Bohr"], correct: 1 },
+    { question: "What is the main function of the kidneys?", options: ["Filter blood", "Digest food", "Produce insulin", "Regulate temperature"], correct: 0 },
+    { question: "What is the formula for the area of a triangle?", options: ["A = l × w", "A = ½ × b × h", "A = π × r²", "A = l × w × h"], correct: 1 },
+    { question: "Which metal is liquid at room temperature?", options: ["Mercury", "Iron", "Copper", "Gold"], correct: 0 },
+    { question: "Which element is represented by the symbol Na?", options: ["Sodium", "Nitrogen", "Neon", "Nickel"], correct: 0 },
+    { question: "Who is credited with inventing the light bulb?", options: ["Nikola Tesla", "Thomas Edison", "Alexander Graham Bell", "Michael Faraday"], correct: 1 },
+    { question: "What is the process by which plants make their own food?", options: ["Respiration", "Photosynthesis", "Transpiration", "Digestion"], correct: 1 },
+    { question: "Which of the following is NOT a programming language?", options: ["Python", "Java", "HTML", "C++"], correct: 2 },
+    { question: "What is the capital of the United States?", options: ["Washington D.C.", "New York", "Los Angeles", "Chicago"], correct: 0 },
+    { question: "What is the main component of the Earth's atmosphere?", options: ["Oxygen", "Nitrogen", "Carbon Dioxide", "Argon"], correct: 1 },
+    { question: "What is the value of pi to two decimal places?", options: ["3.12", "3.14", "3.15", "3.16"], correct: 1 },
+    { question: "Who invented the telephone?", options: ["Nikola Tesla", "Thomas Edison", "Alexander Graham Bell", "Michael Faraday"], correct: 2 },
+    { question: "What is the speed of light?", options: ["300,000 km/s", "150,000 km/s", "1,000,000 km/s", "500,000 km/s"], correct: 0 },
+    { question: "What is the formula for calculating force?", options: ["F = m × a", "F = m + a", "F = m ÷ a", "F = a ÷ m"], correct: 0 },
+    { question: "Who developed the first successful polio vaccine?", options: ["Louis Pasteur", "Jonas Salk", "Edward Jenner", "Albert Calmette"], correct: 1 },
+    { question: "What is the most abundant element in the Earth's crust?", options: ["Iron", "Oxygen", "Silicon", "Aluminum"], correct: 1 },
+    { question: "What does DNA stand for?", options: ["Deoxyribonucleic Acid", "Dioxyribonucleic Acid", "Deoxyribose Acid", "Dioxyribose Acid"], correct: 0 },
+    { question: "What is the boiling point of water?", options: ["100°C", "90°C", "110°C", "95°C"], correct: 0 },
+    { question: "What is the unit of electric current?", options: ["Volt", "Ampere", "Ohm", "Watt"], correct: 1 },
+    { question: "Who is credited with developing the theory of evolution?", options: ["Louis Pasteur", "Charles Darwin", "Gregor Mendel", "Albert Einstein"], correct: 1 },
+    { question: "What is the largest organ in the human body?", options: ["Heart", "Brain", "Lungs", "Skin"], correct: 3 },
+    { question: "Which of these is NOT a part of the electromagnetic spectrum?", options: ["Radio Waves", "Gamma Rays", "Sound Waves", "X-rays"], correct: 2 },
+    { question: "What does the abbreviation 'GPS' stand for?", options: ["Global Positioning System", "Global Projection System", "General Positioning System", "General Projection System"], correct: 0 },
+    { question: "Which number is known as the mathematical constant for Euler's number?", options: ["2.71", "3.14", "1.61", "0.577"], correct: 0 },
+    { question: "Which planet is closest to the sun?", options: ["Earth", "Venus", "Mars", "Mercury"], correct: 3 },
+    { question: "What is the main purpose of the pancreas?", options: ["Filter blood", "Regulate blood sugar", "Produce bile", "Digest food"], correct: 1 },
+    { question: "What is the name of the first artificial Earth satellite?", options: ["Vostok 1", "Sputnik 1", "Apollo 11", "Explorer 1"], correct: 1 },
+    { question: "Which of the following is the most widely used programming language?", options: ["Python", "Java", "C", "Ruby"], correct: 1 },
+    { question: "What is the value of gravity on Earth?", options: ["9.8 m/s²", "8.9 m/s²", "9.2 m/s²", "10.1 m/s²"], correct: 0 },
+    { question: "What does the 'www' stand for in a website address?", options: ["World Wide Web", "Web World Wide", "Wide Web World", "Worldwide Web"], correct: 0 },
+    { question: "What does the process of osmosis involve?", options: ["Movement of water molecules", "Movement of food particles", "Movement of oxygen", "Movement of air molecules"], correct: 0 },
+    { question: "Which scientist is known for his work on the laws of motion?", options: ["Isaac Newton", "Albert Einstein", "Nikola Tesla", "Galileo Galilei"], correct: 0 },
+    { question: "What is the chemical formula for methane?", options: ["CH4", "CO2", "C2H6", "C3H8"], correct: 0 },
+    { question: "Which element has the highest melting point?", options: ["Iron", "Carbon", "Tungsten", "Gold"], correct: 2 },
+    { question: "Who developed the first computer?", options: ["Charles Babbage", "Alan Turing", "John von Neumann", "Bill Gates"], correct: 0 },
+    { question: "What is the primary function of red blood cells?", options: ["Fight infection", "Carry oxygen", "Regulate body temperature", "Carry nutrients"], correct: 1 },
+    { question: "What is the formula for the volume of a cylinder?", options: ["V = πr²h", "V = πr³h", "V = 2πrh", "V = πr²h/3"], correct: 0 },
+    { question: "Which programming language is known for its use in web development?", options: ["Java", "C#", "PHP", "Python"], correct: 2 },
+    { question: "Who is the founder of Microsoft?", options: ["Bill Gates", "Steve Jobs", "Mark Zuckerberg", "Larry Page"], correct: 0 },
+    { question: "Which of the following is a type of renewable energy?", options: ["Coal", "Natural Gas", "Solar", "Nuclear"], correct: 2 },
+    { question: "What is the smallest unit of life?", options: ["Atom", "Molecule", "Cell", "Organelle"], correct: 2 },
+    { question: "What is the hardest bone in the human body?", options: ["Femur", "Skull", "Teeth", "Spine"], correct: 2 },
+    { question: "Which of these is a gas that contributes to global warming?", options: ["Oxygen", "Carbon Dioxide", "Hydrogen", "Nitrogen"], correct: 1 }
+];
+
+ 
+ const livesEl = document.getElementById('lives');
+ const timerEl = document.getElementById('timer');
+ const questionEl = document.getElementById('question');
+ const answersEl = document.getElementById('answers');
+ const startBtn = document.getElementById('startBtn');
+ const gameOverEl = document.getElementById('gameOver');
+ const refreshBtn = document.createElement('button'); // Create refresh button
+ const quizEl = document.getElementById('quiz');
+ 
+ let currentQuestion = 0;
+ let lives = 3;
+ let timer;
+ let timeLeft = 10;
+ let score = 0; // Initialize player score
+ 
+ // Function to shuffle questions array
+ function shuffleQuestions() {
+     for (let i = quizData.length - 1; i > 0; i--) {
+         const j = Math.floor(Math.random() * (i + 1));
+         [quizData[i], quizData[j]] = [quizData[j], quizData[i]]; // Swap elements
+     }
+ }
+ 
+ function loadQuestion() {
+     if (currentQuestion >= quizData.length) {
+         endGame();
+         return;
+     }
+ 
+     // Show quiz container
+     quizEl.style.display = 'block';
+ 
+     // Load current question
+     const q = quizData[currentQuestion];
+     questionEl.textContent = q.question;
+     answersEl.innerHTML = '';
+     q.options.forEach((option, index) => {
+         const btn = document.createElement('button');
+         btn.textContent = option;
+         btn.className = 'answer';
+         btn.addEventListener('click', () => handleAnswer(index));
+         answersEl.appendChild(btn);
+     });
+ 
+     resetTimer();
+ }
+ 
+ function handleAnswer(selected) {
+     const q = quizData[currentQuestion];
+     if (selected === q.correct) {
+         score++; // Increment score for correct answers
+         currentQuestion++;
+         loadQuestion();
+     } else {
+         lives--;
+         updateLives();
+         if (lives === 0) {
+             endGame();
+         }
+     }
+ }
+ 
+ function updateLives() {
+     livesEl.textContent = `Lives: ${lives}`;
+ }
+ 
+ function resetTimer() {
+     clearInterval(timer);
+     timeLeft = 10;
+     timerEl.textContent = `Time: ${timeLeft}`;
+     timer = setInterval(() => {
+         timeLeft--;
+         timerEl.textContent = `Time: ${timeLeft}`;
+         if (timeLeft === 0) {
+             lives--;
+             updateLives();
+             if (lives === 0) {
+                 endGame();
+             } else {
+                 currentQuestion++;
+                 loadQuestion();
+             }
+         }
+     }, 1000);
+ }
+ 
+ function endGame() {
+     clearInterval(timer);
+ 
+     // Hide game elements
+     questionEl.style.display = 'none';
+     answersEl.style.display = 'none';
+     livesEl.style.display = 'none';
+     timerEl.style.display = 'none';
+ 
+     // Display game over message and score
+     gameOverEl.style.display = 'block';
+     gameOverEl.textContent = `Your score is ${score}.`;
+ 
+     // Show refresh button
+     refreshBtn.textContent = "Play Again";
+     refreshBtn.className = 'start-btn';
+     refreshBtn.style.marginTop = '20px';
+     gameOverEl.appendChild(refreshBtn);
+ 
+     // Refresh the page when button is clicked
+     refreshBtn.addEventListener('click', () => {
+         location.reload();
+     });
+ }
+ 
+ // Start Button Click
+ startBtn.addEventListener('click', () => {
+     shuffleQuestions(); // Shuffle questions at the start
+     startBtn.style.display = 'none';
+     loadQuestion();
+ });
+ </script>
+ 
+
+</body>
+</html>
