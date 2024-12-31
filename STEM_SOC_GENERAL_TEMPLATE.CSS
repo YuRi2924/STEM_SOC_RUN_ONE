@@ -1,0 +1,2315 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Reset margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Added to ensure padding and border are included in the element's total width and height */
+  }
+
+  /* Navigation bar */
+  nav {
+    background-color: transparent;
+    /* backdrop-filter: blur(100px); */
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 1% 1%;
+    position: relative;
+    top: 30px;
+    width: 95%;
+    margin: auto;
+    animation:  ANIMATION_FADE_DOWN 0.5s ;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul.left-nav {
+    justify-content: flex-start;
+}
+
+nav ul.right-nav {
+    justify-content: flex-end;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a{
+    height: 100%;
+    padding: 0 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 15px;
+    transition: 1s;
+    margin: 0 3px 0 3px;
+    border-radius: 0px;
+}
+
+nav a:hover{
+    color: #ffffff;
+    background-color: rgb(239, 32, 32);
+    border-radius: 0px ;
+    font-size: 20px;
+ 
+}
+
+nav img{
+    height: 100%;
+    padding: 0 0px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    
+}
+
+nav h2{
+    height: 100%;
+    padding: 0 8px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.fa-bars{
+    color: rgb(0, 0, 0);
+}
+
+/* Base styling for sidebar */
+.side_bar { 
+    position: fixed;
+    top: 0;
+    right: -100%; /* Start off-screen */
+    height: 100vh;
+    width: 20%;
+    z-index: 999;
+    background-color: rgb(0 0 0 / 76%);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 20px;
+    transition: 1s; /* Smooth transition for transform and opacity */
+    opacity: 0; /* Start hidden */
+}
+
+/* Styling for list items in the sidebar */
+.side_bar li {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    text-align: left;
+    transition: 1s;
+    list-style: none;
+    border-bottom: solid white 2px;
+    padding: 20px;
+}
+
+/* Styling for links within the sidebar */
+.side_bar a {
+    text-decoration: none; /* Remove underline from links */
+    color: white;
+    transition: 1s; 
+    text-decoration: none;
+}
+
+/* Show the sidebar */
+.side_bar.show {
+    transform: translateX(0); /* Move it into view */
+    opacity: 1; /* Make it visible */
+    right: 0; /* Align with the right edge */
+}
+
+.menu {
+    display: none;
+}
+
+/* -------------------------------------------SECTION ONE----------------------------------------------*/
+
+.SECTION_ONE{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.801), rgba(0, 0, 0, 0.639)), url('STEM_SOC_QUIZZES_MAIN.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: "Poppins";
+}
+
+.SECTION_ONE_MAIN_CONTENT_PARENT_CONTAINER{
+    width: 100%;
+    margin:auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_HEADER_PARAGRAPHS{
+    width: 100%;
+    padding: 4%;
+    color: white;
+}
+
+.SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_HEADER_PARAGRAPHS h1{
+    width: 100%;
+    font-size: 4rem;
+    line-height: 100%;
+    letter-spacing: 5px;
+}
+
+.SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_HEADER_PARAGRAPHS p{
+    width: 100%;
+    font-size: 100%;
+    margin: 20px 0 20px 0;
+    border-top: solid 3px rgb(239, 32, 32);
+    padding-top: 10px;
+    text-align: justify;
+}
+
+.SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_HEADER_PARAGRAPHS a{
+    margin-top: 20px;
+    text-decoration: none;
+    border: solid rgb(239, 32, 32) 2px;
+    border-radius: 0px;
+    padding: 8px;
+    color: white;
+    transition: 1s;
+    background-color: rgb(239, 32, 32);
+}
+
+.SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_HEADER_PARAGRAPHS h6{
+    margin-top: 5%;
+    font-weight: 300;
+}
+
+.SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_ICONS{
+    width: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 20px;
+    
+}
+
+.SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_ICONS a{
+    text-decoration: none;
+    color: white;
+    transition: 1s;
+}
+
+.SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_ICONS a:hover{
+    color: red;
+}
+
+/* -------------------------------------SECTION TWO-------------------------------------- */
+
+.SECTION_THREE{
+    width: auto;
+    height: auto;
+    background-image: url('STEM_SOC_IMAGE_TWO.svg');
+    background-size: cover;
+    background-repeat: no-repeat; /* Optional: Prevents tiling of the image */
+    background-position: center; /* Optional: Centers the image */
+    border-top: #742a2a solid 10px;
+    font-family: "Poppins";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 4%;
+}
+
+.SECTION_THREE_INTRODUCTORY{
+    width: 100%;
+    margin-bottom: 40px;
+    color: white;
+    text-align: justify;
+}
+
+.SECTION_THREE_INTRODUCTORY h1{
+    font-size: 4rem;
+    text-align: left;
+    line-height: 100%;
+    margin-bottom: 20px;
+}
+
+.SECTION_THREE_INTRODUCTORY p{
+    margin-bottom: 20px;
+}
+
+.SECTION_THREE_TEST_MODE a{
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 0px;
+    padding: 8px;
+    color: white;
+    transition: 1s;
+    background-color: #000000;
+}
+
+.SECTION_THREE_ANNOUNCEMNET{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.ANNOUNCEMENT_CHILDREN{
+    width: 100%;
+}
+
+.ANNOUNCEMENT_CHILDREN img{
+    width: 100%;
+}
+.ANNOUNCEMENT_CHILDREN_IMAGE_CONTAINER{
+    padding-right: 2%;
+    width: 60%;
+}
+
+.ANNOUNCEMENT_CHILDREN h2{
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.ANNOUNCEMENT_CHILDREN p{
+    color: white;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.ANNOUNCEMENT_CHILDREN a{
+    margin-top: 20px;
+    text-decoration: none;
+    border: solid #742a2a(239, 32, 32) 2px;
+    border-radius: 0px;
+    padding: 8px;
+    color: white;
+    transition: 1s;
+    background-color: #742a2a;
+}
+
+.SECTION_THREE_TEST_MODE{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.SECTION_THREE_TEST_MODE h1{
+    text-align: left;
+    color: white;
+    border-bottom: 20px;
+    font-size: 3rem;
+}
+
+.SECTION_THREE_TEST_MODE p{
+    text-align: left;
+    color: white;
+    border-bottom: 20px;
+    font-size: 100%;
+    margin-bottom: 20px;
+}
+
+.SECTION_THREE_TEST_MODE a{
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 0px;
+    padding: 8px;
+    color: white;
+    transition: 1s;
+    background-color: #000000;
+}
+
+.SECTION_THREE_PARENT{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.SECTION_THREE_CHILDREN{
+    margin-bottom: 20px;
+    background-color: white;
+    width: 100%;
+    padding: 2%;
+    border: #000000 solid 2px;
+   
+}
+
+.SECTION_THREE_CHILDREN h2{
+    margin-bottom: 10px;
+    text-align: left;
+}
+.SECTION_THREE_CHILDREN p{
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.SECTION_THREE_CHILDREN a{
+    margin-top: 20px;
+    text-decoration: none;
+    border: solid #742a2a(239, 32, 32) 2px;
+    border-radius: 0px;
+    padding: 8px;
+    color: white;
+    transition: 1s;
+    background-color: #000000;
+}
+
+/* TO AVOID WIDTH SLIDING  */
+
+
+/* ---------------------------------------FOOTER------------------------------------------- */
+
+
+.footer {
+    background-image: url("STEM_SOC_IMAGE_FOOTER.svg"); /* Dark background */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    padding: 20px 0;
+    text-align: left;
+    font-family: "Poppins";
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    justify-content: space-around; /* Even spacing */
+    padding: 0 10%;
+}
+
+.footer-section {
+    flex: 1 1 30%; /* Equal width sections */
+    margin: 10px;
+    min-width: 250px;
+}
+
+.footer-section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #fff; /* Underline effect */
+    padding-bottom: 5px;
+}
+
+.footer-section p,
+.footer-section ul {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footer-section ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: #ffffff; /* Link color */
+    text-decoration: none;
+    transition: 500ms;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+    color: #420c0c; /* Lighter hover effect */
+}
+
+.footer-section p a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-section p a:hover {
+    text-decoration: underline;
+    color: #420c0c;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    padding-top: 20px;
+    border-top: 1px solid #fff; /* Divider line */
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    color: #fff;
+    font-size: 12px;
+    margin: 0;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 320px){
+
+    .PHONE_HIDE{
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        font-size: 10px;
+    }
+  
+    .rLinks {
+        display: none;
+    }
+ 
+    /* Navigation bar */
+      nav {
+        background-color: transparent;
+        backdrop-filter: blur(0px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        padding: 1% 1%;
+        position: relative;
+        top: 20px;
+        width: 100%;
+        margin: auto;
+    }
+    
+    nav ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+    
+    nav ul.left-nav {
+        justify-content: flex-start;
+    }
+    
+    nav ul.right-nav {
+        justify-content: flex-end;
+    }
+    
+    nav li {
+        height: 50px;
+    }
+    
+    nav a{
+        height: 100%;
+        padding: 0 20px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 15px;
+        transition: 1s;
+        margin: 0 3px 0 3px;
+        border-radius: 40px;
+    }
+    
+    nav a:hover{
+        color: #ffffff;
+        background-color: rgba(255, 255, 255, 0);
+        border-radius: 80px ;
+        font-size: 20px;
+    }
+
+    nav img{
+        height: 100%;
+        padding: 0 10px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: white;
+    }
+    
+    nav h2{
+        height: 100%;
+        padding: 0 4px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 10px;
+        line-height: 1;
+    }
+
+    .fa-bars{
+        color: rgb(0, 0, 0);
+    }
+    
+    /* Base styling for sidebar */
+    .side_bar { 
+        position: fixed;
+        top: 0;
+        right: -100%; /* Start off-screen */
+        height: 100vh;
+        width: 100%;
+        z-index: 999;
+        background-color: rgb(0 0 0 / 76%);
+        backdrop-filter: blur(10px);
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding: 20px;
+        transition: 1s; /* Smooth transition for transform and opacity */
+        opacity: 0; /* Start hidden */
+    }
+    
+    /* Styling for list items in the sidebar */
+    .side_bar li {
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100%;
+        text-align: left; /* Center align text and images */
+        transition: 1s; 
+        list-style: none;
+    }
+    
+    /* Styling for links within the sidebar */
+    .side_bar a {
+        text-decoration: none; /* Remove underline from links */
+        color: white;
+        transition: 1s; 
+        text-decoration: none;
+    }
+    
+    /* Show the sidebar */
+    .side_bar.show {
+        transform: translateX(0); /* Move it into view */
+        opacity: 1; /* Make it visible */
+        right: 0; /* Align with the right edge */
+    }
+
+/* -------------------------------------------SECTION ONE----------------------------------------------*/
+
+.SECTION_ONE {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.801), rgba(0, 0, 0, 0.639)), url('STEM_SOC_QUIZZES_MAIN.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Poppins";
+}
+
+.SECTION_ONE_MAIN_CONTENT_PARENT_CONTAINER {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_HEADER_PARAGRAPHS {
+    width: 100%;
+    padding: 5%;
+    color: white;
+}
+
+.SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_HEADER_PARAGRAPHS h1 {
+    width: 100%;
+    font-size: 2.5rem;
+    line-height: 100%;
+    letter-spacing: 0px;
+}
+
+.SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_HEADER_PARAGRAPHS p {
+    width: 100%;
+    font-size: 70%;
+    margin: 5px 0 10px 0;
+    border-top: 3px solid rgb(239, 32, 32);
+    padding-top: 5px;
+    text-align: left;
+}
+
+.SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_HEADER_PARAGRAPHS a {
+    font-size: 70%;
+    text-decoration: none;
+    border: 2px solid rgb(239, 32, 32);
+    padding: 4px;
+    color: white;
+    transition: 1s;
+    background-color: rgb(239, 32, 32);
+}
+
+.SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_ICONS{
+    width: 8%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 20px;
+    
+}
+
+.SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_ICONS a{
+    text-decoration: none;
+    color: white;
+    transition: 1s;
+}
+
+.SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_ICONS a:hover{
+    color: red;
+}
+
+
+/* -------------------------------------SECTION TWO-------------------------------------- */
+
+.SECTION_THREE{
+    width: auto;
+    height: auto;
+    background-image: url('STEM_SOC_BACKGROUND_COLOR_LIGHT.svg');
+    background-size: cover;
+    background-repeat: no-repeat; /* Optional: Prevents tiling of the image */
+    background-position: center; /* Optional: Centers the image */
+    border-top: #742a2a solid 10px;
+    font-family: "Poppins";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 5%;
+}
+
+.SECTION_THREE_INTRODUCTORY{
+    width: 100%;
+    margin-bottom: 40px;
+    color: white;
+    text-align: justify;
+}
+
+.SECTION_THREE_INTRODUCTORY h1{
+    font-size: 1.5rem;
+    text-align: left;
+    line-height: 100%;
+    margin-bottom: 20px;
+}
+
+.SECTION_THREE_INTRODUCTORY p{
+    margin-bottom: 20px;
+    font-size: 70%;
+}
+
+.SECTION_THREE_TEST_MODE a{
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 0px;
+    padding: 8px;
+    color: white;
+    transition: 1s;
+    background-color: #000000;
+    font-size: 70%;
+}
+
+.SECTION_THREE_ANNOUNCEMNET{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.ANNOUNCEMENT_CHILDREN{
+    width: 100%;
+}
+
+.ANNOUNCEMENT_CHILDREN img{
+    width: 100%;
+}
+.ANNOUNCEMENT_CHILDREN_IMAGE_CONTAINER{
+    padding-right: 2%;
+    width: 60%;
+}
+
+.ANNOUNCEMENT_CHILDREN h2{
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.ANNOUNCEMENT_CHILDREN p{
+    color: white;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.ANNOUNCEMENT_CHILDREN a{
+    margin-top: 20px;
+    text-decoration: none;
+    border: solid #742a2a(239, 32, 32) 2px;
+    border-radius: 0px;
+    padding: 4px;
+    color: white;
+    transition: 1s;
+    background-color: #742a2a;
+    font-size: 70%;
+}
+
+.SECTION_THREE_TEST_MODE{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.SECTION_THREE_TEST_MODE h1{
+    text-align: left;
+    color: white;
+    border-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.SECTION_THREE_TEST_MODE p{
+    text-align: left;
+    color: white;
+    border-bottom: 20px;
+    font-size: 70%;
+    margin-bottom: 20px;
+}
+
+.SECTION_THREE_TEST_MODE a{
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 0px;
+    padding: 8px;
+    color: white;
+    transition: 1s;
+    background-color: #000000;
+    font-size: 70%;
+}
+
+.SECTION_THREE_PARENT{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.SECTION_THREE_CHILDREN{
+    margin-bottom: 20px;
+    background-color: white;
+    width: 100%;
+    padding: 2% 2% 5% 2%;
+    border: #000000 solid 2px;
+   
+}
+
+.SECTION_THREE_CHILDREN h2{
+    margin-bottom: 10px;
+    text-align: left;
+}
+.SECTION_THREE_CHILDREN p{
+    margin-bottom: 10px;
+    text-align: justify;
+    font-size: 70%;
+}
+
+.SECTION_THREE_CHILDREN a{
+    margin-top: 20px;
+    text-decoration: none;
+    border: solid #742a2a(239, 32, 32) 2px;
+    border-radius: 0px;
+    padding: 4px;
+    color: white;
+    transition: 1s;
+    background-color: #000000;
+    margin-bottom: 20px;
+    font-size: 70%;
+}
+
+
+
+/* ----------------------------- Footer --------------------------------- */
+.footer {
+    background: url("STEM_SOC_BACKGROUND_COLOR_DARK.svg") center/cover no-repeat;
+    color: #fff;
+    padding: 20px 0;
+    text-align: left;
+    font-family: "Poppins";
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 4%;
+}
+
+.footer-section {
+    flex: 1 1 30%;
+    margin: 10px;
+    min-width: 250px;
+}
+
+.footer-section h2 {
+    font-size: 100%;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5px;
+}
+
+.footer-section p,
+.footer-section ul {
+    margin: 5px 0;
+    font-size: 70%;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 500ms;
+}
+
+.footer-section ul li a:hover,
+.footer-section p a:hover {
+    text-decoration: underline;
+    color: #ea4545;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    padding-top: 20px;
+    border-top: 1px solid #fff;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    color: #fff;
+    font-size: 70%;
+    margin: 0 20px;
+}
+}
+
+@media only screen and (min-width: 375px) and (max-width: 425px){
+   
+    .PHONE_HIDE{
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        font-size: 10px;
+    }
+  
+    .rLinks {
+        display: none;
+    }
+
+
+     
+    /* Navigation bar */
+      nav {
+        background-color: transparent;
+        backdrop-filter: blur(0px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        padding: 1% 1%;
+        position: relative;
+        top: 20px;
+        width: 100%;
+        margin: auto;
+    }
+    
+    nav ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+    
+    nav ul.left-nav {
+        justify-content: flex-start;
+    }
+    
+    nav ul.right-nav {
+        justify-content: flex-end;
+    }
+    
+    nav li {
+        height: 50px;
+    }
+    
+    nav a{
+        height: 100%;
+        padding: 0 20px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 15px;
+        transition: 1s;
+        margin: 0 3px 0 3px;
+        border-radius: 40px;
+    }
+    
+    nav a:hover{
+        color: #ffffff;
+        background-color: rgba(255, 255, 255, 0);
+        border-radius: 80px ;
+        font-size: 20px;
+    }
+
+    nav img{
+        height: 100%;
+        padding: 0 10px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: white;
+    }
+    
+    nav h2{
+        height: 100%;
+        padding: 0 4px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 10px;
+        line-height: 1;
+    }
+
+    .fa-bars{
+        color: rgb(0, 0, 0);
+    }
+    
+    /* Base styling for sidebar */
+    .side_bar { 
+        position: fixed;
+        top: 0;
+        right: -100%; /* Start off-screen */
+        height: 100vh;
+        width: 100%;
+        z-index: 999;
+        background-color: rgb(0 0 0 / 76%);
+        backdrop-filter: blur(10px);
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding: 20px;
+        transition: 1s; /* Smooth transition for transform and opacity */
+        opacity: 0; /* Start hidden */
+    }
+    
+    /* Styling for list items in the sidebar */
+    .side_bar li {
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100%;
+        text-align: left; /* Center align text and images */
+        transition: 1s; 
+        list-style: none;
+    }
+    
+    /* Styling for links within the sidebar */
+    .side_bar a {
+        text-decoration: none; /* Remove underline from links */
+        color: white;
+        transition: 1s; 
+        text-decoration: none;
+    }
+    
+    /* Show the sidebar */
+    .side_bar.show {
+        transform: translateX(0); /* Move it into view */
+        opacity: 1; /* Make it visible */
+        right: 0; /* Align with the right edge */
+    }
+
+/* -------------------------------------------SECTION ONE----------------------------------------------*/
+.SECTION_ONE {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.801), rgba(0, 0, 0, 0.639)), url('STEM_SOC_QUIZZES_MAIN.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Poppins";
+}
+
+.SECTION_ONE_MAIN_CONTENT_PARENT_CONTAINER {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_HEADER_PARAGRAPHS {
+    width: 100%;
+    padding: 5%;
+    color: white;
+}
+
+.SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_HEADER_PARAGRAPHS h1 {
+    width: 100%;
+    font-size: 2.5rem;
+    line-height: 100%;
+    letter-spacing: 0px;
+}
+
+.SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_HEADER_PARAGRAPHS p {
+    width: 100%;
+    font-size: 70%;
+    margin: 5px 0 10px 0;
+    border-top: 3px solid rgb(239, 32, 32);
+    padding-top: 5px;
+    text-align: left;
+}
+
+.SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_HEADER_PARAGRAPHS a {
+    font-size: 70%;
+    text-decoration: none;
+    border: 2px solid rgb(239, 32, 32);
+    padding: 4px;
+    color: white;
+    transition: 1s;
+    background-color: rgb(239, 32, 32);
+}
+
+.SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_ICONS{
+    width: 8%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 20px;
+    
+}
+
+.SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_ICONS a{
+    text-decoration: none;
+    color: white;
+    transition: 1s;
+}
+
+.SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_ICONS a:hover{
+    color: red;
+}
+
+
+/* -------------------------------------SECTION TWO-------------------------------------- */
+
+.SECTION_THREE{
+    width: auto;
+    height: auto;
+    background-image: url('STEM_SOC_BACKGROUND_COLOR_LIGHT.svg');
+    background-size: cover;
+    background-repeat: no-repeat; /* Optional: Prevents tiling of the image */
+    background-position: center; /* Optional: Centers the image */
+    border-top: #742a2a solid 10px;
+    font-family: "Poppins";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 5%;
+}
+
+.SECTION_THREE_INTRODUCTORY{
+    width: 100%;
+    margin-bottom: 40px;
+    color: white;
+    text-align: justify;
+}
+
+.SECTION_THREE_INTRODUCTORY h1{
+    font-size: 1.5rem;
+    text-align: left;
+    line-height: 100%;
+    margin-bottom: 20px;
+}
+
+.SECTION_THREE_INTRODUCTORY p{
+    margin-bottom: 20px;
+    font-size: 70%;
+}
+
+.SECTION_THREE_TEST_MODE a{
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 0px;
+    padding: 8px;
+    color: white;
+    transition: 1s;
+    background-color: #000000;
+    font-size: 70%;
+}
+
+.SECTION_THREE_ANNOUNCEMNET{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.ANNOUNCEMENT_CHILDREN{
+    width: 100%;
+}
+
+.ANNOUNCEMENT_CHILDREN img{
+    width: 100%;
+}
+.ANNOUNCEMENT_CHILDREN_IMAGE_CONTAINER{
+    padding-right: 2%;
+    width: 60%;
+}
+
+.ANNOUNCEMENT_CHILDREN h2{
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.ANNOUNCEMENT_CHILDREN p{
+    color: white;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.ANNOUNCEMENT_CHILDREN a{
+    margin-top: 20px;
+    text-decoration: none;
+    border: solid #742a2a(239, 32, 32) 2px;
+    border-radius: 0px;
+    padding: 4px;
+    color: white;
+    transition: 1s;
+    background-color: #742a2a;
+    font-size: 70%;
+}
+
+.SECTION_THREE_TEST_MODE{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.SECTION_THREE_TEST_MODE h1{
+    text-align: left;
+    color: white;
+    border-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.SECTION_THREE_TEST_MODE p{
+    text-align: left;
+    color: white;
+    border-bottom: 20px;
+    font-size: 70%;
+    margin-bottom: 20px;
+}
+
+.SECTION_THREE_TEST_MODE a{
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 0px;
+    padding: 8px;
+    color: white;
+    transition: 1s;
+    background-color: #000000;
+    font-size: 70%;
+}
+
+.SECTION_THREE_PARENT{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.SECTION_THREE_CHILDREN{
+    margin-bottom: 20px;
+    background-color: white;
+    width: 100%;
+    padding: 2% 2% 5% 2%;
+    border: #000000 solid 2px;
+   
+}
+
+.SECTION_THREE_CHILDREN h2{
+    margin-bottom: 10px;
+    text-align: left;
+}
+.SECTION_THREE_CHILDREN p{
+    margin-bottom: 10px;
+    text-align: justify;
+    font-size: 70%;
+}
+
+.SECTION_THREE_CHILDREN a{
+    margin-top: 20px;
+    text-decoration: none;
+    border: solid #742a2a(239, 32, 32) 2px;
+    border-radius: 0px;
+    padding: 4px;
+    color: white;
+    transition: 1s;
+    background-color: #000000;
+    margin-bottom: 20px;
+    font-size: 70%;
+}
+
+/* ----------------------------- Footer --------------------------------- */
+.footer {
+    background: url("STEM_SOC_BACKGROUND_COLOR_DARK.svg") center/cover no-repeat;
+    color: #fff;
+    padding: 20px 0;
+    text-align: left;
+    font-family: "Poppins";
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 4%;
+}
+
+.footer-section {
+    flex: 1 1 30%;
+    margin: 10px;
+    min-width: 250px;
+}
+
+.footer-section h2 {
+    font-size: 100%;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5px;
+}
+
+.footer-section p,
+.footer-section ul {
+    margin: 5px 0;
+    font-size: 75%;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 500ms;
+}
+
+.footer-section ul li a:hover,
+.footer-section p a:hover {
+    text-decoration: underline;
+    color: #ea4545;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    padding-top: 20px;
+    border-top: 1px solid #fff;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    color: #fff;
+    font-size: 75%;
+    margin: 0 20px;
+}
+}
+@media only screen and (min-width: 425px) and (max-width: 768px){
+      
+    .PHONE_HIDE{
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        font-size: 10px;
+    }
+  
+    .rLinks {
+        display: none;
+    }
+
+    video {
+        display: none;
+    }
+     
+    /* Navigation bar */
+      nav {
+        background-color: transparent;
+        backdrop-filter: blur(0px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        padding: 1% 1%;
+        position: relative;
+        top: 20px;
+        width: 100%;
+        margin: auto;
+    }
+    
+    nav ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+    
+    nav ul.left-nav {
+        justify-content: flex-start;
+    }
+    
+    nav ul.right-nav {
+        justify-content: flex-end;
+    }
+    
+    nav li {
+        height: 50px;
+    }
+    
+    nav a{
+        height: 100%;
+        padding: 0 20px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 15px;
+        transition: 1s;
+        margin: 0 3px 0 3px;
+        border-radius: 40px;
+    }
+    
+    nav a:hover{
+        color: #ffffff;
+        background-color: rgba(255, 255, 255, 0);
+        border-radius: 80px ;
+        font-size: 20px;
+    }
+
+    nav img{
+        height: 100%;
+        padding: 0 10px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: white;
+    }
+    
+    nav h2{
+        height: 100%;
+        padding: 0 4px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 10px;
+        line-height: 1;
+    }
+
+    .fa-bars{
+        color: rgb(0, 0, 0);
+    }
+    
+    /* Base styling for sidebar */
+    .side_bar { 
+        position: fixed;
+        top: 0;
+        right: -100%; /* Start off-screen */
+        height: 100vh;
+        width: 100%;
+        z-index: 999;
+        background-color: rgb(0 0 0 / 76%);
+        backdrop-filter: blur(10px);
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding: 20px;
+        transition: 1s; /* Smooth transition for transform and opacity */
+        opacity: 0; /* Start hidden */
+    }
+    
+    /* Styling for list items in the sidebar */
+    .side_bar li {
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100%;
+        text-align: left; /* Center align text and images */
+        transition: 1s; 
+        list-style: none;
+    }
+    
+    /* Styling for links within the sidebar */
+    .side_bar a {
+        text-decoration: none; /* Remove underline from links */
+        color: white;
+        transition: 1s; 
+        text-decoration: none;
+    }
+    
+    /* Show the sidebar */
+    .side_bar.show {
+        transform: translateX(0); /* Move it into view */
+        opacity: 1; /* Make it visible */
+        right: 0; /* Align with the right edge */
+    }
+
+
+     
+    .SECTION_ONE {
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.801), rgba(0, 0, 0, 0.639)), url('STEM_SOC_QUIZZES_MAIN.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: "Poppins";
+    }
+    
+    .SECTION_ONE_MAIN_CONTENT_PARENT_CONTAINER {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_HEADER_PARAGRAPHS {
+        width: 100%;
+        padding: 5%;
+        color: white;
+    }
+    
+    .SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_HEADER_PARAGRAPHS h1 {
+        width: 100%;
+        font-size: 2.5rem;
+        line-height: 100%;
+        letter-spacing: 0px;
+    }
+    
+    .SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_HEADER_PARAGRAPHS p {
+        width: 100%;
+        font-size: 70%;
+        margin: 5px 0 10px 0;
+        border-top: 3px solid rgb(239, 32, 32);
+        padding-top: 5px;
+        text-align: left;
+    }
+    
+    .SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_HEADER_PARAGRAPHS a {
+        font-size: 70%;
+        text-decoration: none;
+        border: 2px solid rgb(239, 32, 32);
+        padding: 4px;
+        color: white;
+        transition: 1s;
+        background-color: rgb(239, 32, 32);
+    }
+    
+    .SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_ICONS{
+        width: 8%;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        padding: 20px;
+        
+    }
+    
+    .SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_ICONS a{
+        text-decoration: none;
+        color: white;
+        transition: 1s;
+    }
+    
+    .SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_ICONS a:hover{
+        color: red;
+    }
+    
+    
+    /* -------------------------------------SECTION TWO-------------------------------------- */
+    
+    .SECTION_THREE{
+        width: auto;
+        height: auto;
+        background-image: url('STEM_SOC_BACKGROUND_COLOR_LIGHT.svg');
+        background-size: cover;
+        background-repeat: no-repeat; /* Optional: Prevents tiling of the image */
+        background-position: center; /* Optional: Centers the image */
+        border-top: #742a2a solid 10px;
+        font-family: "Poppins";
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        padding: 5%;
+    }
+    
+    .SECTION_THREE_INTRODUCTORY{
+        width: 100%;
+        margin-bottom: 40px;
+        color: white;
+        text-align: justify;
+    }
+    
+    .SECTION_THREE_INTRODUCTORY h1{
+        font-size: 1.5rem;
+        text-align: left;
+        line-height: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .SECTION_THREE_INTRODUCTORY p{
+        margin-bottom: 20px;
+        font-size: 70%;
+    }
+    
+    .SECTION_THREE_TEST_MODE a{
+        margin-top: 20px;
+        text-decoration: none;
+        border-radius: 0px;
+        padding: 8px;
+        color: white;
+        transition: 1s;
+        background-color: #000000;
+        font-size: 70%;
+    }
+    
+    .SECTION_THREE_ANNOUNCEMNET{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    
+    .ANNOUNCEMENT_CHILDREN{
+        width: 100%;
+    }
+    
+    .ANNOUNCEMENT_CHILDREN img{
+        width: 100%;
+    }
+    .ANNOUNCEMENT_CHILDREN_IMAGE_CONTAINER{
+        padding-right: 2%;
+        width: 60%;
+    }
+    
+    .ANNOUNCEMENT_CHILDREN h2{
+        color: rgb(0, 0, 0);
+        font-size: 2rem;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    
+    .ANNOUNCEMENT_CHILDREN p{
+        color: white;
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+    
+    .ANNOUNCEMENT_CHILDREN a{
+        margin-top: 20px;
+        text-decoration: none;
+        border: solid #742a2a(239, 32, 32) 2px;
+        border-radius: 0px;
+        padding: 4px;
+        color: white;
+        transition: 1s;
+        background-color: #742a2a;
+        font-size: 70%;
+    }
+    
+    .SECTION_THREE_TEST_MODE{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .SECTION_THREE_TEST_MODE h1{
+        text-align: left;
+        color: white;
+        border-bottom: 20px;
+        font-size: 1.5rem;
+    }
+    
+    .SECTION_THREE_TEST_MODE p{
+        text-align: left;
+        color: white;
+        border-bottom: 20px;
+        font-size: 70%;
+        margin-bottom: 20px;
+    }
+    
+    .SECTION_THREE_TEST_MODE a{
+        margin-top: 20px;
+        text-decoration: none;
+        border-radius: 0px;
+        padding: 8px;
+        color: white;
+        transition: 1s;
+        background-color: #000000;
+        font-size: 70%;
+    }
+    
+    .SECTION_THREE_PARENT{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    
+    }
+    
+    .SECTION_THREE_CHILDREN{
+        margin-bottom: 20px;
+        background-color: white;
+        width: 100%;
+        padding: 2% 2% 5% 2%;
+        border: #000000 solid 2px;
+       
+    }
+    
+    .SECTION_THREE_CHILDREN h2{
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    .SECTION_THREE_CHILDREN p{
+        margin-bottom: 10px;
+        text-align: justify;
+        font-size: 70%;
+    }
+    
+    .SECTION_THREE_CHILDREN a{
+        margin-top: 20px;
+        text-decoration: none;
+        border: solid #742a2a(239, 32, 32) 2px;
+        border-radius: 0px;
+        padding: 4px;
+        color: white;
+        transition: 1s;
+        background-color: #000000;
+        margin-bottom: 20px;
+        font-size: 70%;
+    }
+   
+
+/* ----------------------------- Footer --------------------------------- */
+.footer {
+    background: url("STEM_SOC_BACKGROUND_COLOR_DARK.svg") center/cover no-repeat;
+    color: #fff;
+    padding: 20px 0;
+    text-align: left;
+    font-family: "Poppins";
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 4%;
+}
+
+.footer-section {
+    flex: 1 1 30%;
+    margin: 10px;
+    min-width: 250px;
+}
+
+.footer-section h2 {
+    font-size: 100%;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5px;
+}
+
+.footer-section p,
+.footer-section ul {
+    margin: 5px 0;
+    font-size: 70%;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 500ms;
+}
+
+.footer-section ul li a:hover,
+.footer-section p a:hover {
+    text-decoration: underline;
+    color: #ea4545;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    padding-top: 20px;
+    border-top: 1px solid #fff;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    color: #fff;
+    font-size: 70%;
+    margin: 0 20px;
+}
+}  
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {  
+
+      
+    .PHONE_HIDE{
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        font-size: 15px;
+    }
+  
+    .rLinks {
+        display: none;
+    }
+
+    video {
+        display: none;
+    }
+     
+    /* Navigation bar */
+      nav {
+        background-color: transparent;
+        backdrop-filter: blur(0px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        padding: 1% 1%;
+        position: relative;
+        top: 20px;
+        width: 95%;
+        margin: auto;
+    }
+    
+    nav ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+    
+    nav ul.left-nav {
+        justify-content: flex-start;
+    }
+    
+    nav ul.right-nav {
+        justify-content: flex-end;
+    }
+    
+    nav li {
+        height: 50px;
+    }
+    
+    nav a{
+        height: 100%;
+        padding: 0 20px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 15px;
+        transition: 1s;
+        margin: 0 3px 0 3px;
+        border-radius: 40px;
+    }
+    
+    nav a:hover{
+        color: #ffffff;
+        background-color: rgba(255, 255, 255, 0);
+        border-radius: 80px ;
+        font-size: 20px;
+    }
+
+    nav img{
+        height: 100%;
+        padding: 0 10px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: white;
+    }
+    
+    nav h2{
+        height: 100%;
+        padding: 0 4px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 15px;
+        line-height: 1;
+    }
+
+    .fa-bars{
+        color: rgb(0, 0, 0);
+    }
+    
+    /* Base styling for sidebar */
+    .side_bar { 
+        position: fixed;
+        top: 0;
+        right: -100%; /* Start off-screen */
+        height: 100vh;
+        width: 100%;
+        z-index: 999;
+        background-color: rgb(0 0 0 / 76%);
+        backdrop-filter: blur(10px);
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding: 20px;
+        transition: 1s; /* Smooth transition for transform and opacity */
+        opacity: 0; /* Start hidden */
+    }
+    
+    /* Styling for list items in the sidebar */
+    .side_bar li {
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100%;
+        text-align: left; /* Center align text and images */
+        transition: 1s; 
+        list-style: none;
+    }
+    
+    /* Styling for links within the sidebar */
+    .side_bar a {
+        text-decoration: none; /* Remove underline from links */
+        color: white;
+        transition: 1s; 
+        text-decoration: none;
+    }
+    
+    /* Show the sidebar */
+    .side_bar.show {
+        transform: translateX(0); /* Move it into view */
+        opacity: 1; /* Make it visible */
+        right: 0; /* Align with the right edge */
+    }
+
+/* -------------------------------------------SECTION ONE----------------------------------------------*/
+.SECTION_ONE {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.801), rgba(0, 0, 0, 0.639)), url('STEM_SOC_QUIZZES_MAIN.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Poppins";
+}
+
+.SECTION_ONE_MAIN_CONTENT_PARENT_CONTAINER {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_HEADER_PARAGRAPHS {
+    width: 100%;
+    padding: 5%;
+    color: white;
+}
+
+.SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_HEADER_PARAGRAPHS h1 {
+    width: 100%;
+    font-size: 4rem;
+    line-height: 100%;
+    letter-spacing: 0px;
+}
+
+.SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_HEADER_PARAGRAPHS p {
+    width: 100%;
+    font-size: 80%;
+    margin: 5px 0 10px 0;
+    border-top: 3px solid rgb(239, 32, 32);
+    padding-top: 5px;
+    text-align: left;
+}
+
+.SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_HEADER_PARAGRAPHS a {
+    font-size: 70%;
+    text-decoration: none;
+    border: 2px solid rgb(239, 32, 32);
+    padding: 4px;
+    color: white;
+    transition: 1s;
+    background-color: rgb(239, 32, 32);
+}
+
+.SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_ICONS{
+    width: 8%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 20px;
+    
+}
+
+.SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_ICONS a{
+    text-decoration: none;
+    color: white;
+    transition: 1s;
+}
+
+.SECTION_ONE_MAIN_CONTENT_CHILDREN_CONTAINER_ICONS a:hover{
+    color: red;
+}
+
+
+/* -------------------------------------SECTION TWO-------------------------------------- */
+
+.SECTION_THREE{
+    width: auto;
+    height: auto;
+    background-image: url('STEM_SOC_BACKGROUND_COLOR_LIGHT.svg');
+    background-size: cover;
+    background-repeat: no-repeat; /* Optional: Prevents tiling of the image */
+    background-position: center; /* Optional: Centers the image */
+    border-top: #742a2a solid 10px;
+    font-family: "Poppins";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 5%;
+}
+
+.SECTION_THREE_INTRODUCTORY{
+    width: 100%;
+    margin-bottom: 40px;
+    color: white;
+    text-align: justify;
+}
+
+.SECTION_THREE_INTRODUCTORY h1{
+    font-size: 2rem;
+    text-align: left;
+    line-height: 100%;
+    margin-bottom: 20px;
+}
+
+.SECTION_THREE_INTRODUCTORY p{
+    margin-bottom: 20px;
+    font-size: 80%;
+}
+
+.SECTION_THREE_TEST_MODE a{
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 0px;
+    padding: 8px;
+    color: white;
+    transition: 1s;
+    background-color: #000000;
+    font-size: 70%;
+}
+
+.SECTION_THREE_ANNOUNCEMNET{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.ANNOUNCEMENT_CHILDREN{
+    width: 100%;
+}
+
+.ANNOUNCEMENT_CHILDREN img{
+    width: 100%;
+}
+.ANNOUNCEMENT_CHILDREN_IMAGE_CONTAINER{
+    padding-right: 2%;
+    width: 60%;
+}
+
+.ANNOUNCEMENT_CHILDREN h2{
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.ANNOUNCEMENT_CHILDREN p{
+    color: white;
+    margin-bottom: 20px;
+    text-align: justify;
+    font-size: 80%;
+}
+
+.ANNOUNCEMENT_CHILDREN a{
+    margin-top: 20px;
+    text-decoration: none;
+    border: solid #742a2a(239, 32, 32) 2px;
+    border-radius: 0px;
+    padding: 4px;
+    color: white;
+    transition: 1s;
+    background-color: #742a2a;
+    font-size: 70%;
+}
+
+.SECTION_THREE_TEST_MODE{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.SECTION_THREE_TEST_MODE h1{
+    text-align: left;
+    color: white;
+    border-bottom: 20px;
+    font-size: 2rem;
+}
+
+.SECTION_THREE_TEST_MODE p{
+    text-align: left;
+    color: white;
+    border-bottom: 20px;
+    font-size: 80%;
+    margin-bottom: 20px;
+}
+
+.SECTION_THREE_TEST_MODE a{
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 0px;
+    padding: 8px;
+    color: white;
+    transition: 1s;
+    background-color: #000000;
+    font-size: 70%;
+}
+
+.SECTION_THREE_PARENT{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.SECTION_THREE_CHILDREN{
+    margin-bottom: 20px;
+    background-color: white;
+    width: 100%;
+    padding: 2% 2% 5% 2%;
+    border: #000000 solid 2px;
+   
+}
+
+.SECTION_THREE_CHILDREN h2{
+    margin-bottom: 10px;
+    text-align: left;
+}
+.SECTION_THREE_CHILDREN p{
+    margin-bottom: 10px;
+    text-align: justify;
+    font-size: 80%;
+}
+
+.SECTION_THREE_CHILDREN a{
+    margin-top: 20px;
+    text-decoration: none;
+    border: solid #742a2a(239, 32, 32) 2px;
+    border-radius: 0px;
+    padding: 4px;
+    color: white;
+    transition: 1s;
+    background-color: #000000;
+    margin-bottom: 20px;
+    font-size: 70%;
+}
+
+
+/* ----------------------------- Footer --------------------------------- */
+.footer {
+    background: url("STEM_SOC_BACKGROUND_COLOR_DARK.svg") center/cover no-repeat;
+    color: #fff;
+    padding: 20px 0;
+    text-align: left;
+    font-family: "Poppins";
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 4%;
+}
+
+.footer-section {
+    flex: 1 1 30%;
+    margin: 10px;
+    min-width: 250px;
+}
+
+.footer-section h2 {
+    font-size: 100%;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5px;
+}
+
+.footer-section p,
+.footer-section ul {
+    margin: 5px 0;
+    font-size: 80%;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 500ms;
+}
+
+.footer-section ul li a:hover,
+.footer-section p a:hover {
+    text-decoration: underline;
+    color: #ea4545;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    padding-top: 20px;
+    border-top: 1px solid #fff;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    color: #fff;
+    font-size: 80%;
+    margin: 0 20px;
+}
+} 
+
+
+
+/* TO AVOID WIDTH SLIDING  */
+
+@media only screen and (max-width:1024px)
+{
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+}
+
+@media only screen and (max-width:2560px)
+{
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+}
